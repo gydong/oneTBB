@@ -74,4 +74,10 @@ const unsigned MByte = 1024*1024;
 #define __TBB_TEST_SKIP_AFFINITY 1
 #endif
 
+#if defined(__has_feature)
+#if __has_feature(address_sanitizer)
+    #define __TBB_TEST_USE_ADDRESS_SANITIZER 1
+#endif
+#endif
+
 #endif /* __TBB_test_common_config_H */
